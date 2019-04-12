@@ -30,4 +30,15 @@ release {
     failOnSnapshotDependencies = false
     failOnUnversionedFiles = false
     failOnUpdateNeeded = false
+    tagTemplate = 'v${version}'
+    scmAdapters = [
+            net.researchgate.release.GitAdapter
+    ]
+    git {
+        requireBranch = 'master'
+        pushToRemote = 'origin'
+        pushToBranchPrefix = ''
+        commitVersionFileOnly = false
+        signTag = true
+    }
 }
