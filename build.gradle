@@ -30,7 +30,7 @@ release {
     failOnSnapshotDependencies = false
     failOnUnversionedFiles = false
     failOnUpdateNeeded = false
-    tagTemplate = 'v${version}'
+    tagTemplate = '${version}'
     scmAdapters = [
             net.researchgate.release.GitAdapter
     ]
